@@ -12,14 +12,14 @@
     <main>
         <div class="divres" id="res"></div>
         <div class="conimg">
-            <img id="vila" width="150px" src="nullnaruto.jpg" alt="">
-            <img id="clã" width="150px" src="nullnaruto.jpg" alt="">
-            <img id="arma" width="150px" src="nullnaruto.jpg" alt="">
-            <img id="estilo" width="150px" src="nullnaruto.jpg" alt="">
-            <img id="modo" width="150px" src="nullnaruto.jpg" alt="">
-            <img id="extra" width="150px" src="nullnaruto.jpg" alt="">
+            <img class="imgs" id="vila" width="150px" height="150px" src="nullnaruto.jpg" alt="">
+            <img class="imgs" id="clã" width="150px" height="150px" src="nullnaruto.jpg" alt="">
+            <img class="imgs" id="arma" width="150px" height="150px" src="nullnaruto.jpg" alt="">
+            <img class="imgs" id="estilo" width="150px" height="150px" src="nullnaruto.jpg" alt="">
+            <img class="imgs" id="modo" width="150px" height="150px" src="nullnaruto.jpg" alt="">
+            <img class="imgs" id="extra" width="150px" height="150px" src="nullnaruto.jpg" alt="">
         </div>
-        <div class="conimg">
+        <div id="inputevent" class="conimg">
             <input onclick="gerador('vila')" type="button" value="vila">
             <input onclick="gerador('clã')" type="button" value="clan">
             <input onclick="gerador('arma')" type="button" value="arma">
@@ -27,8 +27,21 @@
             <input onclick="gerador('modo')" type="button" value="modo">
             <input onclick="gerador('extra')" type="button" value="extra">
         </div>
-        
-        <a href="naruto.html"><input type="button" value="reiniciar"></a>
+
+        <div id="menu">
+            <div class="conimg">
+                <input id="p1" class="player" type="text" value="PLayer 1">
+                <p id="versus">V<span style="color: rgb(255, 225, 0);">S</span></p>
+                <input id="p2" class="player" type="text" value="PLayer 2">
+            </div>
+            <div class="conimg">
+                <input onclick="player(1)" class="but" type="button" value="Confirmar">
+                <input onclick="player(2)" class="but" type="button" value="Confrimar">
+            </div>
+            
+            <input onclick="fight()" id="fight" type="button" value="Fight">
+            <a href="naruto.html"><input type="button" value="reiniciar"></a>
+        </div>
 
         <audio id="som" src="" autoplay></audio>
 
