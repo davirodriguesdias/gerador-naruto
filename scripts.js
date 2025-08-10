@@ -13,8 +13,10 @@ let pontos2 = 0
 let pontos = 0
 
 function gerador(tp) {
-    som.src = "narutosound.mpeg"
+
     if (tp == 'vila') {
+        imgvila.src = "loading.gif"
+        res.textContent = "Carregando..."
         const vilas = [
             { name: "Kage Folha", chance: 2, pts: 10, img: "Kage Folha.jpeg" },
             { name: "Kage Areia", chance: 2, pts: 10, img: "Kage Areia.jpeg" },
@@ -30,18 +32,23 @@ function gerador(tp) {
         let r = Math.random() * 100;
         let total = 0;
 
-        for (let i = 0; i < vilas.length; i++) {
-            total += vilas[i].chance
-            if (r < total) {
-                pontos += vilas[i].pts
-                res.textContent = `${vilas[i].name} (${pontos}pts)`
-                imgvila.src = vilas[i].img
-                break
+        setTimeout(() => {
+            som.src = "narutosound.mpeg"
+            for (let i = 0; i < vilas.length; i++) {
+                total += vilas[i].chance
+                if (r < total) {
+                    pontos += vilas[i].pts
+                    res.textContent = `${vilas[i].name} (${pontos}pts)`
+                    imgvila.src = vilas[i].img
+                    break
+                }
             }
-        }
+        }, 2000);
     }
 
     else if (tp == 'clã') {
+        imgclan.src = "loading.gif"
+        res.textContent = "Carregando..."
         let clas = [
             { name: "Ōtsutsuki", chance: 1, pts: 100, img: "otsuki.jpg" },
             { name: "Senju", chance: 2, pts: 98, img: "senju.jpg" },
@@ -61,18 +68,24 @@ function gerador(tp) {
         let r = Math.random() * 100;
         let total = 0;
 
-        for (let i = 0; i < clas.length; i++) {
-            total += clas[i].chance
-            if (r < total) {
-                pontos += clas[i].pts
-                res.textContent = `${clas[i].name} (${pontos}pts)`
-                imgclan.src = clas[i].img
-                break
+
+        setTimeout(() => {
+            som.src = "narutosound.mpeg"
+            for (let i = 0; i < clas.length; i++) {
+                total += clas[i].chance
+                if (r < total) {
+                    pontos += clas[i].pts
+                    res.textContent = `${clas[i].name} (${pontos}pts)`
+                    imgclan.src = clas[i].img
+                    break
+                }
             }
-        }
+        }, 2000);
     }
 
     else if (tp == 'arma') {
+        imgarma.src = "loading.gif"
+        res.textContent = "Carregando..."
         let armas = [
             { name: "Hogoramo stick", chance: 1, pts: 30, img: "Hogoramo.jpg" },
             { name: "Gunbai", chance: 2, pts: 26, img: "Gunbai.jpg" },
@@ -91,18 +104,23 @@ function gerador(tp) {
         let r = Math.random() * 100;
         let total = 0;
 
-        for (let i = 0; i < armas.length; i++) {
-            total += armas[i].chance
-            if (r < total) {
-                pontos += armas[i].pts
-                res.textContent = `${armas[i].name} (${pontos}pts)`
-                imgarma.src = armas[i].img
-                break
+        setTimeout(() => {
+            som.src = "narutosound.mpeg"
+            for (let i = 0; i < armas.length; i++) {
+                total += armas[i].chance
+                if (r < total) {
+                    pontos += armas[i].pts
+                    res.textContent = `${armas[i].name} (${pontos}pts)`
+                    imgarma.src = armas[i].img
+                    break
+                }
             }
-        }
+        }, 2000);
     }
 
     else if (tp == 'estilo') {
+        imgestilo.src = "loading.gif"
+        res.textContent = "Carregando..."
         let estilos = [
             { name: "Ranton", chance: 2, pts: 96, img: "ranton.jpg" },
             { name: "Mokuton", chance: 3, pts: 94, img: "mokuton.jpg" },
@@ -119,18 +137,24 @@ function gerador(tp) {
         let r = Math.random() * 100;
         let total = 0;
 
-        for (let i = 0; i < estilos.length; i++) {
-            total += estilos[i].chance
-            if (r < total) {
-                pontos += estilos[i].pts
-                res.textContent = `${estilos[i].name} (${pontos}pts)`
-                imgestilo.src = estilos[i].img
-                break
+        setTimeout(() => {
+            som.src = "narutosound.mpeg"
+            for (let i = 0; i < estilos.length; i++) {
+                total += estilos[i].chance
+                if (r < total) {
+                    pontos += estilos[i].pts
+                    res.textContent = `${estilos[i].name} (${pontos}pts)`
+                    imgestilo.src = estilos[i].img
+                    break
+                }
             }
-        }
+        }, 2000);
+
     }
 
     else if (tp == 'modo') {
+        imgmodo.src = "loading.gif"
+        res.textContent = "Carregando..."
         let modos = [
             { name: "Senpõ Hashirama", chance: 3, pts: 100, img: "hashirama.jpg" },
             { name: "Senpõ Cobra", chance: 6, pts: 98, img: "cobra.jpg" },
@@ -142,18 +166,23 @@ function gerador(tp) {
         let r = Math.random() * 100;
         let total = 0;
 
-        for (let i = 0; i < modos.length; i++) {
-            total += modos[i].chance
-            if (r < total) {
-                pontos += modos[i].pts
-                res.textContent = `${modos[i].name} (${pontos}pts)`
-                imgmodo.src = modos[i].img
-                break
+        setTimeout(() => {
+            som.src = "narutosound.mpeg"
+            for (let i = 0; i < modos.length; i++) {
+                total += modos[i].chance
+                if (r < total) {
+                    pontos += modos[i].pts
+                    res.textContent = `${modos[i].name} (${pontos}pts)`
+                    imgmodo.src = modos[i].img
+                    break
+                }
             }
-        }
+        }, 2000);
     }
 
     else if (tp == 'extra') {
+        imgextra.src = "loading.gif"
+        res.textContent = "Carregando..."
         let extras = [
             { name: "Juubi", chance: 0.5, pts: 100, img: "juubi.jpg" },
             { name: "Rinnegan Supremo", chance: 0.7, pts: 98, img: "supremo.jpg" },
@@ -194,7 +223,9 @@ function gerador(tp) {
         let r = Math.random() * totalChance;
         let total = 0;
 
-        for (let i = 0; i < extras.length; i++) {
+        setTimeout(() => {
+            som.src = "narutosound.mpeg"
+            for (let i = 0; i < extras.length; i++) {
             total += extras[i].chance
             if (r < total) {
                 pontos += extras[i].pts
@@ -203,6 +234,7 @@ function gerador(tp) {
                 break
             }
         }
+        }, 2000);
     }
 }
 
